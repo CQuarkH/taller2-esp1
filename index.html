@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="style.css" />
-      <title>Document</title>
-   </head>
-   <body>
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css" />
+   <title>Battle Script</title>
+</head>
+
+<body>
+   <section>
+      <audio id="gameAudio" src="assets/fight.wav" preload="auto" loop></audio>
+      <audio id="player1HitAudio" src="assets/hit-sound.mp3" preload="auto"></audio>
+      <audio id="player2HitAudio" src="assets/hit-sound.mp3" preload="auto"></audio>
+      <audio id="gameOverAudio" src="assets/round_end.wav" preload="auto"></audio>
+      <div class="title__container">
+         <h1 class="title">BattleScript</h1>
+         <button id="startButton" class="start__game">Start Game</button>
+      </div>
+      <div id="fightArea" class="fight__area"></div>
       <div class="chars__life__bar-container">
          <div class="life__bar-container">
-            <h3>Jugador 1</h3>
+            <h3>J1</h3>
             <div id="player1Life" class="life__bar">
                <div class="life__bar-inner" style="width: 100%"></div>
             </div>
          </div>
          <div class="life__bar-container">
-            <h3>Jugador 2</h3>
+            <h3>J2</h3>
             <div id="player2Life" class="life__bar">
                <div class="life__bar-inner" style="width: 100%"></div>
             </div>
          </div>
       </div>
-      <div id="fightArea" class="fight__area"></div>
-      <script src="main.js"></script>
-   </body>
+   </section>
+   <script type="module" src="js/main.js"></script>
+</body>
+
 </html>

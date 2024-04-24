@@ -1,21 +1,52 @@
 body {
    width: 100%;
+   /* Asegura que el cuerpo ocupe todo el ancho disponible */
+   height: 100vh;
+   /* Asegura que el cuerpo ocupe todo el alto de la ventana */
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 20px;
+   justify-content: center;
+   margin: 0;
+   /* Elimina el margen para asegurarse de que el fondo se extienda por todo el cuerpo */
+   gap: 10px;
+   background: url("/assets/bg.avif") no-repeat center center;
+   /* Centra la imagen */
+   background-size: cover;
+   /* Ajusta el tamaño del fondo para cubrir todo el cuerpo */
+   background-attachment: fixed;
+   /* Fija la imagen de fondo */
    overflow-x: hidden;
+}
+
+section {
+   color: white;
+   margin-top: 30px;
+   width: 960px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+
+}
+
+.title__container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   font-weight: bold;
 }
 
 .fight__area {
    position: relative;
-   width: 800px;
+   width: 100%;
    height: 400px;
-   padding: 10px;
-   border: 1px solid black;
-   background-image: url("/assets/grass.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
+
+   border: 8px solid red;
+   background-image: url("/assets/asphalt.jpg");
+   background-repeat: repeat;
    background-position: center;
    border-radius: 10px;
 }
@@ -33,18 +64,19 @@ body {
    transition: all 0.3s ease;
 }
 
+
 .chars__life__bar-container {
    display: flex;
-   gap: 16px;
-   margin-top: 20px;
+   width: 100%;
+   justify-content: space-between;
+
 }
 
 .life__bar-container {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: center;
-   margin-top: 20px;
+   align-items: start;
    border-radius: 10px;
 }
 
@@ -74,5 +106,17 @@ body {
    height: 100%;
    background-color: #00ff00;
    border-radius: 10px;
+   color: black;
    transition: width 0.5s ease;
+}
+
+.damage-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   background-color: transparent;
+   pointer-events: none;
 }
