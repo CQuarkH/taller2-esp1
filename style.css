@@ -1,21 +1,15 @@
 body {
    width: 100%;
-   /* Asegura que el cuerpo ocupe todo el ancho disponible */
    height: 100vh;
-   /* Asegura que el cuerpo ocupe todo el alto de la ventana */
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    margin: 0;
-   /* Elimina el margen para asegurarse de que el fondo se extienda por todo el cuerpo */
    gap: 10px;
    background: url("/taller2-esp1/assets/bg.avif") no-repeat center center;
-   /* Centra la imagen */
    background-size: cover;
-   /* Ajusta el tamaño del fondo para cubrir todo el cuerpo */
    background-attachment: fixed;
-   /* Fija la imagen de fondo */
    overflow-x: hidden;
 }
 
