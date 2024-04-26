@@ -16,7 +16,7 @@ export const initializeGame = () => {
       "d",
       "q",
       "blue",
-      'assets/player1.png'
+      "assets/player1.png"
    );
 
    const player2 = new Character(
@@ -24,19 +24,18 @@ export const initializeGame = () => {
       "player2",
       100,
       randomizeAttack(),
-      "u",
-      "j",
-      "h",
-      "k",
       "i",
+      "k",
+      "j",
+      "l",
+      "o",
       "purple",
-      'assets/player2.png'
+      "assets/player2.png"
    );
 
    placePlayers(player1, player2);
 
    handleStartButton(speed, player1, player2, initializeGame);
-}
+};
 
 initializeGame();
-
